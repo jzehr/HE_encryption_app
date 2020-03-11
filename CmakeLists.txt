@@ -1,0 +1,32 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT license.
+
+cmake_minimum_required(VERSION 3.12)
+
+project(Encryption VERSION 3.4.5 LANGUAGES CXX)
+
+# Executable will be in /bin #
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/)
+
+
+#message( ${CMAKE_SOURCE_DIR})
+#message( ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+
+## add the executables here ##
+add_executable(site_a scripts/site_a_encrypt.cpp)
+add_executable(site_b scripts/site_b_encrypt.cpp)
+add_executable(compare_a_b scripts/compare_a_b.cpp)
+add_executable(read_hamming scripts/read_hamming_results.cpp)
+
+# Import Microsoft SEAL
+find_package(SEAL 3.4.5 EXACT REQUIRED
+  #PATHS ${Tester_SOURCE_DIR}/../src/cmake}
+  PATHS ${Tester_SOURCE_DIR}/SEAL/native/src/cmake}
+  )
+
+## link the SEAL library to the executable ##
+# Link Microsoft SEAL
+target_link_libraries(site_a SEAL::seal)
+target_link_libraries(site_b SEAL::seal)
+target_link_libraries(compare_a_b SEAL::seal)
+target_link_libraries(read_hamming SEAL::seal)

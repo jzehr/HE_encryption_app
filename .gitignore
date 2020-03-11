@@ -1,0 +1,10 @@
+SEAL/
+
+data/A/*
+data/B/*
+
+Makefile
+cmake_install.cmake
+
+CMakeCache.txt
+CMakeFiles/*
