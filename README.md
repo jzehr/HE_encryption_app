@@ -5,12 +5,13 @@
 ### Microsoft SEAL 
 https://github.com/microsoft/SEAL.git
 
-Please see [Installing Microsoft SEAL](https://github.com/microsoft/SEAL#installing-microsoft-seal-1) for instructions.
-
 ## Installation
 
 ```
-git clone https://github.com/microsoft/SEAL.git
+brew install seal
+```
+
+```
 git clone https://github.com/veg/hivtrace-homomorphic-encryption.git
 cd hivtrace-homomorphic-encryption
 cmake .

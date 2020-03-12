@@ -23,7 +23,7 @@
 #define poly_mod 8192
 
 
-#include "../SEAL/native/src/seal/seal.h"
+#include "/usr/local/Cellar/seal/3.4.5/include/SEAL-3.4/seal/seal.h"
 
 
 using namespace std;

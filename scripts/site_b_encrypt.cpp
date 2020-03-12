@@ -23,7 +23,7 @@
 #define plain_mod_batch 114689
 
 
-#include "../SEAL/native/src/seal/seal.h"
+#include "/usr/local/Cellar/seal/3.4.5/include/SEAL-3.4/seal/seal.h"
 
 using namespace std;
 using namespace seal;
